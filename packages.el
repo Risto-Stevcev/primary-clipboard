@@ -37,7 +37,9 @@
   (require 'xclip)
   (xclip-mode 1)
   (setq x-select-enable-clipboard t)
-  (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+
+  (setq interprogram-cut-function 'xclip-select-text)
+  (setq interprogram-paste-function 'xclip-selection-value)
 
   ;; To get the middle mouse button to paste from the PRIMARY clipboard, use:
   ;; (xterm-mouse-mode -1)
